@@ -83,7 +83,7 @@ int main(){
         
         // Pulsing scale effect (1.0 to 1.2 and back)
         pulseTime += t.asSeconds();
-        float scale = 1.25f + 0.25f * std::sin(pulseTime * 2.0f);  // Oscillates
+        float scale = 2.0f + std::sin(pulseTime*M_PI);  // Oscillates
         icon.setScale(scale, scale);
         update(t, player, icon, window);
         render(player, icon, window);
